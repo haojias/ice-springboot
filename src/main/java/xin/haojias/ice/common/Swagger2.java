@@ -24,7 +24,7 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.didispace.web"))
+                .apis(RequestHandlerSelectors.basePackage("xin.haojias.ice.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -32,9 +32,8 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Ice")
-                .description("Ice-Demo")
+                .description("Ice-接口")
                 .termsOfServiceUrl("www.haojias.xin")
-                .contact("hcj")
                 .version("1.0")
                 .build();
     }

@@ -11,9 +11,12 @@ import xin.haojias.ice.methods.service.UserService;
 @RequestMapping(value = "/user")
 public class UserController {
 
+    @Autowired
+    UserService userService;
 
     @RequestMapping
-    public User find(User user){
+    public User find(String  name){
+        User user=userService.get(name);
         return user;
     }
 
