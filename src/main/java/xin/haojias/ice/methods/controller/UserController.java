@@ -24,9 +24,7 @@ public class UserController {
 
     @RequestMapping(value = "/findAll")
     public Page<User> findAll(){
-        new Sort(Sort.Direction.DESC, "description").and(new Sort(Sort.Direction.ASC, "id"));
-        Page<User> user=userService.findAll();
-        return user;
+        return userService.findAll();
     }
 
 }
