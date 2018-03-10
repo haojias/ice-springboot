@@ -5,9 +5,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import xin.haojias.ice.methods.domain.User;
 
-public interface UserRepository extends JpaRepository<User,Long> {
+import java.io.Serializable;
 
-    User findByName(String name);
+public interface UserRepository extends JpaRepository<User,Long>,Serializable{
+
+
 
     @Query("select u from User u where u.name=:name")
     User findUser(@Param("name") String name);

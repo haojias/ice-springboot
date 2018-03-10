@@ -1,12 +1,13 @@
 package xin.haojias.ice.methods.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import xin.haojias.ice.common.base.BaseEntity;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class User {
+@Table(name = "user")
+public class User  implements Serializable{
 
     @Id
     @GeneratedValue
